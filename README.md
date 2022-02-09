@@ -1,3 +1,5 @@
 # cmpe137-team4
 
-Ekea
+EKEA
+
+E-commerce app using Flutter
