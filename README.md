@@ -1,5 +1,11 @@
-# cmpe137-team4
+# CMPE137 - team 4
 
-EKEA
+## EKEA
+E-commerce app ... 
 
-E-commerce app using Flutter
+## Software Used
+- Flutter 
+- Dart
+- Android Studios
+
+
