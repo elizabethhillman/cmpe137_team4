@@ -1,7 +1,7 @@
 # CMPE137 - team 4
 
 ## EKEA
-E-commerce app ... 
+Ekea is an e-commerce app where users can ... 
 
 ## Software Used
 - Flutter 
