@@ -5,7 +5,8 @@ Ekea is an e-commerce app where users can shop from a wide range of products, se
 
 ## Software Used
 - Flutter v. 2.10
-- Dart v. 2.12.4
-- Android Studios
+- Dart v. 2.15.4
+- Android Studios v. 2021.1
+- Xcode iOS Simulator v. 12.5.1
 
 
