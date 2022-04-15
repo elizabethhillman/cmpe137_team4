@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.red,
         title: Text('EKEA'),
         actions: [
@@ -89,12 +91,20 @@ class _HomePageState extends State<HomePage> {
             InkWell(
                 onTap: () {},
                 child: ListTile(
-                    title: Text('Settings'), leading: Icon(Icons.settings))),
+                    title: Text('Settings'),
+                    leading: Icon(
+                      Icons.settings,
+                      color: Colors.blue,
+                    ))),
 
             InkWell(
                 onTap: () {},
-                child:
-                    ListTile(title: Text('About'), leading: Icon(Icons.help))),
+                child: ListTile(
+                    title: Text('About'),
+                    leading: Icon(
+                      Icons.help,
+                      color: Colors.green,
+                    ))),
           ],
         ),
       ),
