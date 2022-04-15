@@ -43,8 +43,58 @@ class _HomePageState extends State<HomePage> {
           children: [
             //header of drawer
             new UserAccountsDrawerHeader(
-                accountName: Text('Cmpe 137'),
-                accountEmail: Text('Cmpe137@sjsu.edu'))
+              accountName: Text('Sammy Spartan'),
+              accountEmail: Text(
+                'sammy.spartan@sjsu.edu',
+              ),
+              currentAccountPicture: GestureDetector(
+                child: new CircleAvatar(backgroundColor: Colors.grey),
+              ),
+              decoration: new BoxDecoration(color: Colors.red),
+            ),
+            InkWell(
+                onTap: () {},
+                child: ListTile(
+                    title: Text('Home Page'), leading: Icon(Icons.home))),
+
+            InkWell(
+                onTap: () {},
+                child: ListTile(
+                    title: Text('My Account'), leading: Icon(Icons.person))),
+
+            InkWell(
+                onTap: () {},
+                child: ListTile(
+                    title: Text('My Orders'),
+                    leading: Icon(Icons.shopping_basket))),
+
+            InkWell(
+                onTap: () {},
+                child: ListTile(
+                    title: Text('Categories'), leading: Icon(Icons.dashboard))),
+
+            InkWell(
+                onTap: () {},
+                child: ListTile(
+                    title: Text('My Orders'),
+                    leading: Icon(Icons.shopping_basket))),
+
+            InkWell(
+                onTap: () {},
+                child: ListTile(
+                    title: Text('Favorites'), leading: Icon(Icons.favorite))),
+
+            Divider(),
+
+            InkWell(
+                onTap: () {},
+                child: ListTile(
+                    title: Text('Settings'), leading: Icon(Icons.settings))),
+
+            InkWell(
+                onTap: () {},
+                child:
+                    ListTile(title: Text('About'), leading: Icon(Icons.help))),
           ],
         ),
       ),
