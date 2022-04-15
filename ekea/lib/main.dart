@@ -20,6 +20,28 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Widget image_carousel = new Container(
+      child: new CarouselSlider(
+          options: CarouselOptions(
+            height: 200.0,
+            autoPlay: true,
+          ),
+          items: [
+            MyImageView('images/carousel_images/imagescarousel1.jpg'),
+            MyImageView('images/carousel_images/carousel2.jpg'),
+            MyImageView('images/carousel_images/carousel3.jpeg'),
+            MyImageView('images/carousel_images/carousel4.webp')
+            //   Container(
+            //     margin: EdgeInsets.all(6.0),
+            //     decoration: BoxDecoration(
+            //         image: DecorationImage(
+            //             image: FileImage(
+            //               'images/carousel1.jpg',
+            //             ),
+            //             fit: BoxFit.cover)),
+            //   )
+          ]),
+    );
     return Scaffold(
       appBar: new AppBar(
         elevation: 0.0,
@@ -106,6 +128,24 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.green,
                     ))),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class MyImageView extends StatelessWidget {
+  String imagePath;
+  MyImageView(this.imagePath);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 5),
+      child: FittedBox(
+        fit: BoxFit.fill,
+        child: Image.asset(
+          imagePath,
         ),
       ),
     );
