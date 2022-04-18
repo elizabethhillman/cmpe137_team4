@@ -64,10 +64,11 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - images/carousel_images/imagescarousel1.jpg
-    - images/carousel_images/carousel2.jpg
-    - images/carousel_images/carousel3.jpeg
-    - images/carousel_images/carousel4.webp
+    - carousel_images/carousel1.jpg
+    - carousel_images/carousel2.jpg
+    - carousel_images/carousel3.jpeg
+    - carousel_images/carousel4.webp
+    - carousel_images/carousel5.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

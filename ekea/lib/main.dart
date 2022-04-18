@@ -21,25 +21,38 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = new Container(
+      height: 200.0,
       child: new CarouselSlider(
           options: CarouselOptions(
-            height: 200.0,
+            viewportFraction: 1,
             autoPlay: true,
           ),
           items: [
-            MyImageView('images/carousel_images/imagescarousel1.jpg'),
-            MyImageView('images/carousel_images/carousel2.jpg'),
-            MyImageView('images/carousel_images/carousel3.jpeg'),
-            MyImageView('images/carousel_images/carousel4.webp')
-            //   Container(
-            //     margin: EdgeInsets.all(6.0),
-            //     decoration: BoxDecoration(
-            //         image: DecorationImage(
-            //             image: FileImage(
-            //               'images/carousel1.jpg',
-            //             ),
-            //             fit: BoxFit.cover)),
-            //   )
+            Image.asset(
+              'carousel_images/carousel1.jpg',
+              fit: BoxFit.cover,
+              width: 500.0,
+            ),
+            Image.asset(
+              'carousel_images/carousel2.jpg',
+              fit: BoxFit.cover,
+              width: 500.0,
+            ),
+            Image.asset(
+              'carousel_images/carousel3.jpeg',
+              fit: BoxFit.cover,
+              width: 500.0,
+            ),
+            Image.asset(
+              'carousel_images/carousel4.webp',
+              fit: BoxFit.cover,
+              width: 500.0,
+            ),
+            Image.asset(
+              'carousel_images/carousel5.jpg',
+              fit: BoxFit.cover,
+              width: 500.0,
+            ),
           ]),
     );
     return Scaffold(
@@ -130,23 +143,8 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class MyImageView extends StatelessWidget {
-  String imagePath;
-  MyImageView(this.imagePath);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
-      child: FittedBox(
-        fit: BoxFit.fill,
-        child: Image.asset(
-          imagePath,
-        ),
+      body: new ListView(
+        children: <Widget>[image_carousel],
       ),
     );
   }
