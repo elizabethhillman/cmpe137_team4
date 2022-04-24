@@ -69,6 +69,15 @@ flutter:
     - carousel_images/carousel3.jpeg
     - carousel_images/carousel4.webp
     - carousel_images/carousel5.jpg
+    - images/clothesSketches/tshirt.png
+    - images/clothesSketches/dress.png
+    - images/clothesSketches/formal.png
+    - images/clothesSketches/jacket.png
+    - images/clothesSketches/shoe.png
+    - images/clothesSketches/pants.png
+    - images/clothesSketches/necklace.png
+    - images/products/blazer1.png
+    - images/products/dress1.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
