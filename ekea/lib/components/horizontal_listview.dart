@@ -6,10 +6,39 @@ class HorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.0,
+      height: 100.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: [],
+        children: <Widget>[
+          Category(
+            image_location: 'images/clothesSketches/tshirt.png',
+            image_caption: 'Shirt',
+          ),
+          Category(
+            image_location: 'images/clothesSketches/dress.png',
+            image_caption: 'Dresses',
+          ),
+          Category(
+            image_location: 'images/clothesSketches/formal.png',
+            image_caption: 'Formal',
+          ),
+          Category(
+            image_location: 'images/clothesSketches/jacket.png',
+            image_caption: 'Jackets',
+          ),
+          Category(
+            image_location: 'images/clothesSketches/shoe.png',
+            image_caption: 'Shoes',
+          ),
+          Category(
+            image_location: 'images/clothesSketches/pants.png',
+            image_caption: 'Pants',
+          ),
+          Category(
+            image_location: 'images/clothesSketches/necklace.png',
+            image_caption: 'Accessory',
+          ),
+        ],
       ),
     );
   }
@@ -27,9 +56,17 @@ class Category extends StatelessWidget {
       padding: const EdgeInsets.all(2.0),
       child: InkWell(
         onTap: () {},
-        child: ListTile(
-          title: Image.asset(image_location),
-          subtitle: Text(image_caption),
+        child: Container(
+          width: 100.0,
+          child: ListTile(
+            title: Image.asset(image_location,
+            width: 100.0,
+            height: 80.0),
+            subtitle: Container(
+              alignment: Alignment.topCenter,
+              child: Text(image_caption, style: new TextStyle(fontSize: 12.0),),
+            )
+          ),
         ),
       ),
     );

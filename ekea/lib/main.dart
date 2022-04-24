@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ekea/components/horizontal_listview.dart';
+import 'package:ekea/components/products.dart';
+
 
 void main() {
   runApp(
@@ -111,11 +113,11 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                     title: Text('Categories'), leading: Icon(Icons.dashboard))),
 
-            InkWell(
+            /*InkWell(
                 onTap: () {},
                 child: ListTile(
                     title: Text('My Orders'),
-                    leading: Icon(Icons.shopping_basket))),
+                    leading: Icon(Icons.shopping_basket))),*/
 
             InkWell(
                 onTap: () {},
@@ -152,6 +154,16 @@ class _HomePageState extends State<HomePage> {
             child: new Text('Categories'),
           ),
           HorizontalList(),
+
+          new Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: new Text('Recent products'),
+          ),
+
+          Container(
+            height: 320.0,
+            child: Products(),
+          )
         ],
       ),
     );
