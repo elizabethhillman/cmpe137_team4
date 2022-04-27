@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
   final product_detail_picture;
@@ -8,9 +9,9 @@ class ProductDetails extends StatefulWidget {
 
   ProductDetails(
       {this.product_detail_name,
-      this.product_detail_new_price,
-      this.product_detail_old_price,
-      this.product_detail_picture});
+        this.product_detail_new_price,
+        this.product_detail_old_price,
+        this.product_detail_picture});
 
   @override
   State<ProductDetails> createState() => _ProductDetailsState();
@@ -57,17 +58,17 @@ class _ProductDetailsState extends State<ProductDetails> {
                     children: <Widget>[
                       Expanded(
                           child: Text(
-                        "\$${widget.product_detail_old_price}",
-                        style: TextStyle(
-                            color: Colors.black87,
-                            decoration: TextDecoration.lineThrough),
-                      )),
+                            "\$${widget.product_detail_old_price}",
+                            style: TextStyle(
+                                color: Colors.black87,
+                                decoration: TextDecoration.lineThrough),
+                          )),
                       Expanded(
                           child: Text(
-                        "\$${widget.product_detail_new_price}",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.red),
-                      )),
+                            "\$${widget.product_detail_new_price}",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, color: Colors.red),
+                          )),
                     ],
                   ),
                 ),
@@ -81,7 +82,26 @@ class _ProductDetailsState extends State<ProductDetails> {
               //------The Size Button -------
               Expanded(
                   child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: new Text("Size"),
+                                content: Text("Choose the size"),
+                                actions: <Widget>[
+                                  MaterialButton(
+                                      onPressed: (){
+                                        Navigator.of(context).pop(context);
+                                      },
+                                      child: const Text("Close",
+                                        style: TextStyle(
+                                            color: Colors.blue
+                                        ),))
+                                ],
+                              );
+                            });
+                      },
                       color: Colors.white,
                       textColor: Colors.grey,
                       elevation: 0.2,
@@ -93,7 +113,26 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ))),
               Expanded(
                   child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: new Text("Color"),
+                                content: Text("Choose the color"),
+                                actions: <Widget>[
+                                  MaterialButton(
+                                      onPressed: (){
+                                        Navigator.of(context).pop(context);
+                                      },
+                                      child: const Text("Close",
+                                        style: TextStyle(
+                                            color: Colors.blue
+                                        ),))
+                                ],
+                              );
+                            });
+                      },
                       color: Colors.white,
                       textColor: Colors.grey,
                       elevation: 0.2,
@@ -105,7 +144,26 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ))),
               Expanded(
                   child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: new Text("Quantity"),
+                                content: Text("Choose the quantity"),
+                                actions: <Widget>[
+                                  MaterialButton(
+                                      onPressed: (){
+                                        Navigator.of(context).pop(context);
+                                      },
+                                      child: const Text("Close",
+                                        style: TextStyle(
+                                            color: Colors.blue
+                                        ),))
+                                ],
+                              );
+                            });
+                      },
                       color: Colors.white,
                       textColor: Colors.grey,
                       elevation: 0.2,
@@ -123,21 +181,51 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               //------The Size Button -------
               Expanded(
-                  child: MaterialButton(
-                onPressed: () {},
-                color: Colors.red,
-                textColor: Colors.white,
-                elevation: 0.2,
-                child: Text("Buy now")
-              ),
+                child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.red,
+                    textColor: Colors.white,
+                    elevation: 0.2,
+                    child: Text("Buy now")
+                ),
               ),
               IconButton(onPressed: (){}, icon: Icon(Icons.add_shopping_cart)),
               IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border), color: Colors.red)
 
             ],
           ),
+          const Divider(color: Colors.grey),
+          const ListTile(
+            title: Text("Product details"),
+            subtitle: Text("~~insert product description~~ \n We'll either have to make up something about each product or copy product descriptions from somewhere else."),
+          ),
+          Divider(),
+          Row(
+              children: <Widget>[
+                const Padding(padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                  child: Text("Product Name: ", style: TextStyle(color: Colors.grey),),),
+                Padding(padding: EdgeInsets.all(5.0),
+                  child: Text("${widget.product_detail_name}"))
+              ]
+          ),
+          Row(
+              children: const <Widget>[
+                Padding(padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                  child: Text("Product Brand: ", style: TextStyle(color: Colors.grey),),),
+                Padding(padding: EdgeInsets.all(5.0),
+                    child: Text("Brand X"))
+              ]
+          ),
+          Row(
+              children: const <Widget>[
+                Padding(padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                  child: Text("Product Condition: ", style: TextStyle(color: Colors.grey),),),
+                Padding(padding: EdgeInsets.all(5.0),
+                  child: Text("NEW"),)
+              ]
+          ),
         ]
-      )
+        )
     );
   }
 }
