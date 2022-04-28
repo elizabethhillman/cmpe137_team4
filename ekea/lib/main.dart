@@ -6,7 +6,7 @@ import 'package:ekea/components/products.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     ),
@@ -23,9 +23,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Widget image_carousel = new Container(
+    Widget image_carousel = Container(
       height: 200.0,
-      child: new CarouselSlider(
+      child: CarouselSlider(
           options: CarouselOptions(
             viewportFraction: 1,
             autoPlay: true,
@@ -59,32 +59,32 @@ class _HomePageState extends State<HomePage> {
           ]),
     );
     return Scaffold(
-      appBar: new AppBar(
+      appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.red,
         title: Text('EKEA'),
         actions: [
-          new IconButton(
-              icon: Icon(
+          IconButton(
+              icon: const Icon(
                 Icons.search,
                 color: Colors.white,
               ),
               onPressed: () {}),
-          new IconButton(
-              icon: Icon(
+          IconButton(
+              icon: const Icon(
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
               onPressed: () {})
         ],
       ),
-      drawer: new Drawer(
-        child: new ListView(
+      drawer: Drawer(
+        child: ListView(
           children: [
             //header of drawer
-            new UserAccountsDrawerHeader(
-              accountName: Text('Sammy Spartan'),
-              accountEmail: Text(
+            UserAccountsDrawerHeader(
+              accountName: const Text('Sammy Spartan'),
+              accountEmail: const Text(
                 'sammy.spartan@sjsu.edu',
               ),
               currentAccountPicture: GestureDetector(
@@ -94,70 +94,62 @@ class _HomePageState extends State<HomePage> {
             ),
             InkWell(
                 onTap: () {},
-                child: ListTile(
-                    title: Text('Home Page'), leading: Icon(Icons.home))),
+                child: const ListTile(
+                    title: Text('Home Page'), leading: Icon(Icons.home, color: Colors.red))),
 
             InkWell(
                 onTap: () {},
-                child: ListTile(
-                    title: Text('My Account'), leading: Icon(Icons.person))),
+                child: const ListTile(
+                    title: Text('My Account'), leading: Icon(Icons.person, color: Colors.red))),
 
             InkWell(
                 onTap: () {},
-                child: ListTile(
+                child: const ListTile(
                     title: Text('My Orders'),
-                    leading: Icon(Icons.shopping_basket))),
+                    leading: Icon(Icons.shopping_basket, color: Colors.red))),
 
             InkWell(
                 onTap: () {},
-                child: ListTile(
-                    title: Text('Categories'), leading: Icon(Icons.dashboard))),
-
-            /*InkWell(
-                onTap: () {},
-                child: ListTile(
-                    title: Text('My Orders'),
-                    leading: Icon(Icons.shopping_basket))),*/
+                child: const ListTile(
+                    title: Text('Shopping Cart'), leading: Icon(Icons.shopping_cart, color: Colors.red,))),
 
             InkWell(
                 onTap: () {},
-                child: ListTile(
-                    title: Text('Favorites'), leading: Icon(Icons.favorite))),
+                child: const ListTile(
+                    title: Text('Favorites'), leading: Icon(Icons.favorite, color: Colors.red))),
 
             Divider(),
 
             InkWell(
                 onTap: () {},
-                child: ListTile(
+                child: const ListTile(
                     title: Text('Settings'),
                     leading: Icon(
                       Icons.settings,
-                      color: Colors.blue,
                     ))),
 
             InkWell(
                 onTap: () {},
-                child: ListTile(
+                child: const ListTile(
                     title: Text('About'),
                     leading: Icon(
                       Icons.help,
-                      color: Colors.green,
                     ))),
           ],
         ),
       ),
-      body: new ListView(
+      body: ListView(
         children: <Widget>[
           image_carousel,
-          new Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: new Text('Categories'),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('Categories'),
           ),
-          HorizontalList(),
+          const HorizontalList(),
 
-          new Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: new Text('Recent products'),
+          const Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Text('Recent products'),
           ),
 
           Container(
