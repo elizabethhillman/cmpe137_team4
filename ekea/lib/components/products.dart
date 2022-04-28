@@ -95,7 +95,7 @@ class Single_prod extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Hero(
-          tag: prod_name,
+          tag: Text("hero 1"),
           child: Material(
             child: InkWell(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -112,7 +112,7 @@ class Single_prod extends StatelessWidget {
                       Expanded(
                           child: Text(prod_name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
                       ),
-                      Text("\$${prod_price}", style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
+                      Text("\$$prod_price", style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
                     ],
                     )
                     // child: ListTile(
