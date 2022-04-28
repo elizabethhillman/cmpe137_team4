@@ -59,14 +59,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                       Expanded(
                           child: Text(
                             "\$${widget.product_detail_old_price}",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.black87,
                                 decoration: TextDecoration.lineThrough),
                           )),
                       Expanded(
                           child: Text(
                             "\$${widget.product_detail_new_price}",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold, color: Colors.red),
                           )),
                     ],

@@ -78,6 +78,12 @@ flutter:
     - images/clothesSketches/necklace.png
     - images/products/blazer1.png
     - images/products/dress1.png
+    - images/products/shoesF.jpg
+    - images/products/shoesM.png
+    - images/products/ring.png
+    - images/products/watch.png
+    - images/products/chain.png
+    - images/products/bracelet.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
