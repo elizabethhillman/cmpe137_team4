@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ekea/components/horizontal_listview.dart';
 import 'package:ekea/components/products.dart';
+import 'package:ekea/pages/cart.dart';
 
 
 void main() {
@@ -75,7 +76,9 @@ class _HomePageState extends State<HomePage> {
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
-              onPressed: () {})
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+              })
         ],
       ),
       drawer: Drawer(
@@ -109,7 +112,9 @@ class _HomePageState extends State<HomePage> {
                     leading: Icon(Icons.shopping_basket, color: Colors.red))),
 
             InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+                },
                 child: const ListTile(
                     title: Text('Shopping Cart'), leading: Icon(Icons.shopping_cart, color: Colors.red,))),
 
