@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:ekea/components/cart_products.dart';
+
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);
 
@@ -24,28 +26,28 @@ class _CartState extends State<Cart> {
               onPressed: () {}),
         ], // <Widget>[]
       ),
-
+      body: new Cart_products(),
       bottomNavigationBar: Container(
-        color: Colors.white,
-        child: Row(
-          children: <Widget>[
-            const Expanded(child: ListTile(
-              title: Text("Total: "),
-              subtitle: Text("\$230"),
-            )),
-            
-            Expanded(
-                child: MaterialButton(onPressed: (){},
-                child: Text("Checkout", style: TextStyle(color: Colors.white),),
-                color: Colors.red,
+          color: Colors.white,
+          child: Row(
+            children: <Widget>[
+              const Expanded(
+                  child: ListTile(
+                title: Text("Total: "),
+                subtitle: Text("\$185"),
+              )),
+              Expanded(
+                child: MaterialButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Checkout",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  color: Colors.red,
                 ),
-
-
-
-                )
-          ],
-        )
-      ),
+              )
+            ],
+          )),
     );
   }
 }
