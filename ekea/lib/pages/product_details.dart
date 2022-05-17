@@ -24,7 +24,7 @@ class _ProductDetailsState extends State<ProductDetails> {
     return Scaffold(
         appBar: AppBar(
           elevation: 0.1,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.blue,
           title: InkWell(
               onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage() ));},
               child: Text('EKEA')),
@@ -64,7 +64,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           child: Text(
                             "\$${widget.product_detail_new_price}",
                             style: const TextStyle(
-                                fontWeight: FontWeight.bold, color: Colors.red),
+                                fontWeight: FontWeight.bold, color: Colors.blue),
                           )),
                     ],
                   ),
@@ -180,7 +180,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               Expanded(
                 child: MaterialButton(
                     onPressed: () {},
-                    color: Colors.red,
+                    color: Colors.blue,
                     textColor: Colors.white,
                     elevation: 0.2,
                     child: Text("Buy now")
@@ -324,7 +324,7 @@ class Similar_single_prod extends StatelessWidget {
                         Expanded(
                           child: Text(prod_name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
                         ),
-                        Text("\$$prod_price", style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
+                        Text("\$$prod_price", style: const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
                       ],
                       )
                     // child: ListTile(

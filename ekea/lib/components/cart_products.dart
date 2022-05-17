@@ -83,14 +83,14 @@ class Single_cart_product extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: Text(cart_prod_size, style: TextStyle(color: Colors.red),),
+                  child: Text(cart_prod_size, style: TextStyle(color: Colors.black),),
                 ),
               
                 new Padding(padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
                   child: Text("Color:"),),
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: Text(cart_prod_color, style: TextStyle(color: Colors.red)),
+                  child: Text(cart_prod_color, style: TextStyle(color: Colors.black)),
                 )
 
               ],
@@ -103,7 +103,7 @@ class Single_cart_product extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 17.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.red
+                  color: Colors.blue
                 ),
               ),
             )
