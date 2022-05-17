@@ -15,7 +15,7 @@ class _CartState extends State<Cart> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blue,
         title: Text('Cart'),
         actions: [
           IconButton(
@@ -32,19 +32,26 @@ class _CartState extends State<Cart> {
           child: Row(
             children: <Widget>[
               const Expanded(
-                  child: ListTile(
-                title: Text("Total: "),
-                subtitle: Text("\$185"),
-              )),
+                 child: Padding(
+                   padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
+                     child: ListTile(
+                       title: Text("Total: "),
+                       subtitle: Text("\$185"),
+                     )
+                 ),
+              ),
               Expanded(
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Checkout",
-                    style: TextStyle(color: Colors.white),
+                child: Padding (
+                  padding: EdgeInsets.fromLTRB(0, 0, 50, 30),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Checkout",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    color: Colors.blue,
                   ),
-                  color: Colors.red,
-                ),
+                )
               )
             ],
           )),

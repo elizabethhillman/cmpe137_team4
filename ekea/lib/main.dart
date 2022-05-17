@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blue,
         title: Text('EKEA'),
         actions: [
           IconButton(
@@ -93,30 +93,30 @@ class _HomePageState extends State<HomePage> {
               currentAccountPicture: GestureDetector(
                 child: new CircleAvatar(backgroundColor: Colors.grey),
               ),
-              decoration: new BoxDecoration(color: Colors.red),
+              decoration: new BoxDecoration(color: Colors.blue),
             ),
             InkWell(
                 onTap: () {},
                 child: const ListTile(
-                    title: Text('Home Page'), leading: Icon(Icons.home, color: Colors.red))),
+                    title: Text('Home Page'), leading: Icon(Icons.home, color: Colors.blue))),
 
             InkWell(
                 onTap: () {},
                 child: const ListTile(
-                    title: Text('My Account'), leading: Icon(Icons.person, color: Colors.red))),
+                    title: Text('My Account'), leading: Icon(Icons.person, color: Colors.blue))),
 
             InkWell(
                 onTap: () {},
                 child: const ListTile(
                     title: Text('My Orders'),
-                    leading: Icon(Icons.shopping_basket, color: Colors.red))),
+                    leading: Icon(Icons.shopping_basket, color: Colors.blue))),
 
             InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
                 },
                 child: const ListTile(
-                    title: Text('Shopping Cart'), leading: Icon(Icons.shopping_cart, color: Colors.red,))),
+                    title: Text('Shopping Cart'), leading: Icon(Icons.shopping_cart, color: Colors.blue,))),
 
             InkWell(
                 onTap: () {},
