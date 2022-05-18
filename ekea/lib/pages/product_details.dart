@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ekea/main.dart';
+import 'package:ekea/pages/cart.dart';
 
 
 class ProductDetails extends StatefulWidget {
@@ -209,7 +210,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                     child: Text("Buy now")
                 ),
               ),
-              IconButton(onPressed: (){}, icon: Icon(Icons.add_shopping_cart)),
+              IconButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+              }, icon: Icon(Icons.add_shopping_cart)),
               IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border), color: Colors.red)
 
             ],
