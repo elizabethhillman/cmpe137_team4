@@ -217,9 +217,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           const Divider(color: Colors.grey),
           const ListTile(
             title: Text("Product details"),
-            subtitle: Text("~~insert product description~~ \n We'll either have to make up something about each product or copy product descriptions from somewhere else."),
           ),
-          Divider(),
           Row(
               children: <Widget>[
                 const Padding(padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
