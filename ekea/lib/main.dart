@@ -91,7 +91,8 @@ class _HomePageState extends State<HomePage> {
                 'sammy.spartan@sjsu.edu',
               ),
               currentAccountPicture: GestureDetector(
-                child: new CircleAvatar(backgroundColor: Colors.grey),
+                child: new Image.asset('images/sjsuLogo.jpg')
+                // new CircleAvatar(backgroundColor: Colors.grey),
               ),
               decoration: new BoxDecoration(color: Colors.blue),
             ),

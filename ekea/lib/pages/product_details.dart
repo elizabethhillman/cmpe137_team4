@@ -85,7 +85,29 @@ class _ProductDetailsState extends State<ProductDetails> {
                             builder: (context) {
                               return AlertDialog(
                                 title: new Text("Size"),
-                                content: Text("Choose the size"),
+                                content: SingleChildScrollView(
+                                  child: Column(
+                                    children: <Widget>[
+                                      for (int i = 1; i <= 5; i++)
+                                        ListTile(
+                                          title: Text(
+                                            'Radio $i',
+                                            style: Theme.of(context).textTheme.subtitle1?.copyWith(color: i == 5 ? Colors.black38 : Colors.black),
+                                          ),
+                                          // leading: Radio(
+                                          //   value: i,
+                                          //   activeColor: const Color(0xFF6200EE),
+                                          //   onChanged: i == 5 ? null : (int value) {
+                                          //     setState(() {
+                                          //       _value = value;
+                                          //     });
+                                          //   },
+                                          //   groupValue: null,
+                                          // ),
+                                        ),
+                                    ],
+                                  )
+                                ),
                                 actions: <Widget>[
                                   MaterialButton(
                                       onPressed: (){
@@ -148,6 +170,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               return AlertDialog(
                                 title: new Text("Quantity"),
                                 content: Text("Choose the quantity"),
+
                                 actions: <Widget>[
                                   MaterialButton(
                                       onPressed: (){
