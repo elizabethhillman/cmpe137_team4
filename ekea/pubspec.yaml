@@ -76,13 +76,6 @@ flutter:
     - carousel_images/rugs.jpeg.webp
     - carousel_images/Smart home.jpeg.webp
     - carousel_images/bathroom.jpeg.webp
-    - images/clothesSketches/tshirt.png
-    - images/clothesSketches/dress.png
-    - images/clothesSketches/formal.png
-    - images/clothesSketches/jacket.png
-    - images/clothesSketches/shoe.png
-    - images/clothesSketches/pants.png
-    - images/clothesSketches/necklace.png
     - images/products/blazer1.png
     - images/products/dress1.png
     - images/products/shoesF.jpg
@@ -91,6 +84,18 @@ flutter:
     - images/products/watch.png
     - images/products/chain.png
     - images/products/bracelet.png
+    - images/products/aepplaryd.jpg.webp
+    - images/products/dresser.jpg.webp
+    - images/products/fake plant.jpg.webp
+    - images/products/king size bed.jpg.webp
+    - images/products/soap dispenser.jpg.webp
+    - images/products/towel.jpg.webp
+    - images/products/utensils.jpg.webp
+    - images/products/wireless blind.jpg.webp
+    - images/products/arm chair.jpg.webp
+    - images/products/dinnerware.jpg.webp
+    - images/products/dresser2.jpg.webp
+    - images/products/microwave-oven.jpg.webp
     - images/sjsuLogo.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

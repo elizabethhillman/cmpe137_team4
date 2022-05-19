@@ -11,52 +11,52 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var product_list = [
     {
-      "name": "Armani Blazer",
-      "picture": "images/products/blazer1.png",
-      "old_price": 120,
-      "price": 85,
+      "name": "'L' shaped couch",
+      "picture": "images/products/aepplaryd.jpg.webp",
+      "old_price": 1849,
+      "price": 1649,
     },
     {
-      "name": "Black dress",
-      "picture": "images/products/dress1.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Dresser",
+      "picture": "images/products/dresser.jpg.webp",
+      "old_price": 500,
+      "price": 349,
     },
     {
-      "name": "Black Oxfords",
-      "picture": "images/products/shoesM.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Artificial Plant",
+      "picture": "images/products/fake plant.jpg.webp",
+      "old_price": 8,
+      "price": 6,
     },
     {
-      "name": "Black Stilettos",
-      "picture": "images/products/shoesF.jpg",
-      "old_price": 100,
-      "price": 50,
+      "name": "King Size Bed",
+      "picture": "images/products/king size bed.jpg.webp",
+      "old_price": 310,
+      "price": 294,
     },
     {
-      "name": "Gold Chain",
-      "picture": "images/products/chain.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Soap Dispenser",
+      "picture": "images/products/soap dispenser.jpg.webp",
+      "old_price": 16,
+      "price": 14,
     },
     {
-    "name": "Black Bracelet",
-    "picture": "images/products/bracelet.png",
-    "old_price": 100,
-    "price": 50,
+      "name": "Bath Towels",
+      "picture": "images/products/towel.jpg.webp",
+      "old_price": 7,
+      "price": 5,
     },
     {
-      "name": "Silver Ring",
-      "picture": "images/products/ring.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Utensils",
+      "picture": "images/products/utensils.jpg.webp",
+      "old_price": 7,
+      "price": 6,
     },
     {
-      "name": "AP Watch",
-      "picture": "images/products/watch.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Automatic Blinds",
+      "picture": "images/products/wireless blind.jpg.webp",
+      "old_price": 159,
+      "price": 145,
     }
   ];
 
@@ -100,36 +100,46 @@ class Single_prod extends StatelessWidget {
             child: InkWell(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => ProductDetails(
-                    product_detail_name: prod_name,
-                    product_detail_new_price: prod_price,
-                    product_detail_old_price: prod_old_price,
-                    product_detail_picture: prod_picture,
-                  ))),
+                        product_detail_name: prod_name,
+                        product_detail_new_price: prod_price,
+                        product_detail_old_price: prod_old_price,
+                        product_detail_picture: prod_picture,
+                      ))),
               child: GridTile(
                   footer: Container(
-                    color: Colors.white,
-                    child: Row(children: <Widget>[
-                      Expanded(
-                          child: Text(prod_name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
+                      color: Colors.white,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(
+                              prod_name,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                            ),
+                          ),
+                          Text(
+                            "\$$prod_price",
+                            style: const TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      )
+                      // child: ListTile(
+                      //   leading: Text(
+                      //     prod_name,
+                      //     style: TextStyle(fontWeight: FontWeight.bold),
+                      //   ),
+                      //   title: Text("\$$prod_price",
+                      //       style: const TextStyle(
+                      //           color: Colors.red, fontWeight: FontWeight.w800)),
+                      //   subtitle: Text("\$$prod_old_price",
+                      //       style: const TextStyle(
+                      //           color: Colors.black54,
+                      //           fontWeight: FontWeight.w800,
+                      //           decoration: TextDecoration.lineThrough)),
+                      // ),
                       ),
-                      Text("\$$prod_price", style: const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
-                    ],
-                    )
-                    // child: ListTile(
-                    //   leading: Text(
-                    //     prod_name,
-                    //     style: TextStyle(fontWeight: FontWeight.bold),
-                    //   ),
-                    //   title: Text("\$$prod_price",
-                    //       style: const TextStyle(
-                    //           color: Colors.red, fontWeight: FontWeight.w800)),
-                    //   subtitle: Text("\$$prod_old_price",
-                    //       style: const TextStyle(
-                    //           color: Colors.black54,
-                    //           fontWeight: FontWeight.w800,
-                    //           decoration: TextDecoration.lineThrough)),
-                    // ),
-                  ),
                   child: Image.asset(prod_picture, fit: BoxFit.cover)),
             ),
           )),

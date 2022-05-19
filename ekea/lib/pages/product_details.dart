@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ekea/main.dart';
 import 'package:ekea/pages/cart.dart';
 
-
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
   final product_detail_picture;
@@ -11,9 +10,9 @@ class ProductDetails extends StatefulWidget {
 
   ProductDetails(
       {this.product_detail_name,
-        this.product_detail_new_price,
-        this.product_detail_old_price,
-        this.product_detail_picture});
+      this.product_detail_new_price,
+      this.product_detail_old_price,
+      this.product_detail_picture});
 
   @override
   State<ProductDetails> createState() => _ProductDetailsState();
@@ -27,7 +26,10 @@ class _ProductDetailsState extends State<ProductDetails> {
           elevation: 0.1,
           backgroundColor: Colors.blue,
           title: InkWell(
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage() ));},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              },
               child: Text('EKEA')),
           actions: [
             IconButton(
@@ -56,17 +58,17 @@ class _ProductDetailsState extends State<ProductDetails> {
                     children: <Widget>[
                       Expanded(
                           child: Text(
-                            "\$${widget.product_detail_old_price}",
-                            style: const TextStyle(
-                                color: Colors.black87,
-                                decoration: TextDecoration.lineThrough),
-                          )),
+                        "\$${widget.product_detail_old_price}",
+                        style: const TextStyle(
+                            color: Colors.black87,
+                            decoration: TextDecoration.lineThrough),
+                      )),
                       Expanded(
                           child: Text(
-                            "\$${widget.product_detail_new_price}",
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold, color: Colors.blue),
-                          )),
+                        "\$${widget.product_detail_new_price}",
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.blue),
+                      )),
                     ],
                   ),
                 ),
@@ -87,37 +89,42 @@ class _ProductDetailsState extends State<ProductDetails> {
                               return AlertDialog(
                                 title: new Text("Size"),
                                 content: SingleChildScrollView(
-                                  child: Column(
-                                    children: <Widget>[
-                                      for (int i = 1; i <= 5; i++)
-                                        ListTile(
-                                          title: Text(
-                                            'Radio $i',
-                                            style: Theme.of(context).textTheme.subtitle1?.copyWith(color: i == 5 ? Colors.black38 : Colors.black),
-                                          ),
-                                          // leading: Radio(
-                                          //   value: i,
-                                          //   activeColor: const Color(0xFF6200EE),
-                                          //   onChanged: i == 5 ? null : (int value) {
-                                          //     setState(() {
-                                          //       _value = value;
-                                          //     });
-                                          //   },
-                                          //   groupValue: null,
-                                          // ),
+                                    child: Column(
+                                  children: <Widget>[
+                                    for (int i = 1; i <= 5; i++)
+                                      ListTile(
+                                        title: Text(
+                                          'Radio $i',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .subtitle1
+                                              ?.copyWith(
+                                                  color: i == 5
+                                                      ? Colors.black38
+                                                      : Colors.black),
                                         ),
-                                    ],
-                                  )
-                                ),
+                                        // leading: Radio(
+                                        //   value: i,
+                                        //   activeColor: const Color(0xFF6200EE),
+                                        //   onChanged: i == 5 ? null : (int value) {
+                                        //     setState(() {
+                                        //       _value = value;
+                                        //     });
+                                        //   },
+                                        //   groupValue: null,
+                                        // ),
+                                      ),
+                                  ],
+                                )),
                                 actions: <Widget>[
                                   MaterialButton(
-                                      onPressed: (){
+                                      onPressed: () {
                                         Navigator.of(context).pop(context);
                                       },
-                                      child: const Text("Close",
-                                        style: TextStyle(
-                                            color: Colors.blue
-                                        ),))
+                                      child: const Text(
+                                        "Close",
+                                        style: TextStyle(color: Colors.blue),
+                                      ))
                                 ],
                               );
                             });
@@ -142,13 +149,13 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 content: Text("Choose the color"),
                                 actions: <Widget>[
                                   MaterialButton(
-                                      onPressed: (){
+                                      onPressed: () {
                                         Navigator.of(context).pop(context);
                                       },
-                                      child: const Text("Close",
-                                        style: TextStyle(
-                                            color: Colors.blue
-                                        ),))
+                                      child: const Text(
+                                        "Close",
+                                        style: TextStyle(color: Colors.blue),
+                                      ))
                                 ],
                               );
                             });
@@ -171,16 +178,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                               return AlertDialog(
                                 title: new Text("Quantity"),
                                 content: Text("Choose the quantity"),
-
                                 actions: <Widget>[
                                   MaterialButton(
-                                      onPressed: (){
+                                      onPressed: () {
                                         Navigator.of(context).pop(context);
                                       },
-                                      child: const Text("Close",
-                                        style: TextStyle(
-                                            color: Colors.blue
-                                        ),))
+                                      child: const Text(
+                                        "Close",
+                                        style: TextStyle(color: Colors.blue),
+                                      ))
                                 ],
                               );
                             });
@@ -207,57 +213,69 @@ class _ProductDetailsState extends State<ProductDetails> {
                     color: Colors.blue,
                     textColor: Colors.white,
                     elevation: 0.2,
-                    child: Text("Buy now")
-                ),
+                    child: Text("Buy now")),
               ),
-              IconButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
-              }, icon: Icon(Icons.add_shopping_cart)),
-              IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border), color: Colors.red)
-
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Cart()));
+                  },
+                  icon: Icon(Icons.add_shopping_cart)),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.favorite_border),
+                  color: Colors.red)
             ],
           ),
           const Divider(color: Colors.grey),
           const ListTile(
             title: Text("Product details"),
           ),
-          Row(
-              children: <Widget>[
-                const Padding(padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
-                  child: Text("Product Name: ", style: TextStyle(color: Colors.grey),),),
-                Padding(padding: EdgeInsets.all(5.0),
-                  child: Text("${widget.product_detail_name}"))
-              ]
-          ),
-          Row(
-              children: const <Widget>[
-                Padding(padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
-                  child: Text("Product Brand: ", style: TextStyle(color: Colors.grey),),),
-                Padding(padding: EdgeInsets.all(5.0),
-                    child: Text("Brand X"))
-              ]
-          ),
-          Row(
-              children: const <Widget>[
-                Padding(padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
-                  child: Text("Product Condition: ", style: TextStyle(color: Colors.grey),),),
-                Padding(padding: EdgeInsets.all(5.0),
-                  child: Text("NEW"),)
-              ]
-          ),
-        const Divider(),
-        const Padding(padding: EdgeInsets.all(8.0),
-            child: Text("Similar Products")
-        ),
+          Row(children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+              child: Text(
+                "Product Name: ",
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+            Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text("${widget.product_detail_name}"))
+          ]),
+          Row(children: const <Widget>[
+            Padding(
+              padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+              child: Text(
+                "Product Brand: ",
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+            Padding(padding: EdgeInsets.all(5.0), child: Text("Brand X"))
+          ]),
+          Row(children: const <Widget>[
+            Padding(
+              padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+              child: Text(
+                "Product Condition: ",
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Text("NEW"),
+            )
+          ]),
+          const Divider(),
+          const Padding(
+              padding: EdgeInsets.all(8.0), child: Text("Similar Products")),
 
 //          SIMILAR PRODUCTS SECTION
-        Container(
-          height: 340.0,
+          Container(
+            height: 340.0,
             child: const Similar_products(),
-        )
-        ]
-        )
-    );
+          )
+        ]));
   }
 }
 
@@ -271,28 +289,28 @@ class Similar_products extends StatefulWidget {
 class _Similar_productsState extends State<Similar_products> {
   var product_list = [
     {
-      "name": "Black Oxfords",
-      "picture": "images/products/shoesM.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Leather Arm Chair",
+      "picture": "images/products/arm chair.jpg.webp",
+      "old_price": 350,
+      "price": 275,
     },
     {
-      "name": "Black Stilettos",
-      "picture": "images/products/shoesF.jpg",
-      "old_price": 100,
-      "price": 50,
+      "name": "Dinnerware",
+      "picture": "images/products/dinnerware.jpg.webp",
+      "old_price": 50,
+      "price": 40,
     },
     {
-      "name": "Silver Ring",
-      "picture": "images/products/ring.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Dresser",
+      "picture": "images/products/dresser2.jpg.webp",
+      "old_price": 370,
+      "price": 329,
     },
     {
-      "name": "AP Watch",
-      "picture": "images/products/watch.png",
-      "old_price": 100,
-      "price": 50,
+      "name": "Microwave Oven",
+      "picture": "images/products/microwave-oven.jpg.webp",
+      "old_price": 75,
+      "price": 49,
     }
   ];
 
@@ -301,7 +319,7 @@ class _Similar_productsState extends State<Similar_products> {
     return GridView.builder(
         itemCount: product_list.length,
         gridDelegate:
-        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Similar_single_prod(
             prod_name: product_list[index]['name'],
@@ -323,9 +341,9 @@ class Similar_single_prod extends StatelessWidget {
 
   Similar_single_prod(
       {this.prod_name,
-        this.prod_picture,
-        this.prod_old_price,
-        this.prod_price});
+      this.prod_picture,
+      this.prod_old_price,
+      this.prod_price});
 
   @override
   Widget build(BuildContext context) {
@@ -336,40 +354,49 @@ class Similar_single_prod extends StatelessWidget {
             child: InkWell(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => ProductDetails(
-                    product_detail_name: prod_name,
-                    product_detail_new_price: prod_price,
-                    product_detail_old_price: prod_old_price,
-                    product_detail_picture: prod_picture,
-                  ))),
+                        product_detail_name: prod_name,
+                        product_detail_new_price: prod_price,
+                        product_detail_old_price: prod_old_price,
+                        product_detail_picture: prod_picture,
+                      ))),
               child: GridTile(
                   footer: Container(
                       color: Colors.white,
-                      child: Row(children: <Widget>[
-                        Expanded(
-                          child: Text(prod_name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
-                        ),
-                        Text("\$$prod_price", style: const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
-                      ],
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(
+                              prod_name,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                            ),
+                          ),
+                          Text(
+                            "\$$prod_price",
+                            style: const TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       )
-                    // child: ListTile(
-                    //   leading: Text(
-                    //     prod_name,
-                    //     style: TextStyle(fontWeight: FontWeight.bold),
-                    //   ),
-                    //   title: Text("\$$prod_price",
-                    //       style: const TextStyle(
-                    //           color: Colors.red, fontWeight: FontWeight.w800)),
-                    //   subtitle: Text("\$$prod_old_price",
-                    //       style: const TextStyle(
-                    //           color: Colors.black54,
-                    //           fontWeight: FontWeight.w800,
-                    //           decoration: TextDecoration.lineThrough)),
-                    // ),
-                  ),
+                      // child: ListTile(
+                      //   leading: Text(
+                      //     prod_name,
+                      //     style: TextStyle(fontWeight: FontWeight.bold),
+                      //   ),
+                      //   title: Text("\$$prod_price",
+                      //       style: const TextStyle(
+                      //           color: Colors.red, fontWeight: FontWeight.w800)),
+                      //   subtitle: Text("\$$prod_old_price",
+                      //       style: const TextStyle(
+                      //           color: Colors.black54,
+                      //           fontWeight: FontWeight.w800,
+                      //           decoration: TextDecoration.lineThrough)),
+                      // ),
+                      ),
                   child: Image.asset(prod_picture, fit: BoxFit.cover)),
             ),
           )),
     );
   }
 }
-
