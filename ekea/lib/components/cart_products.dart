@@ -10,18 +10,18 @@ class Cart_products extends StatefulWidget {
 class _Cart_productsState extends State<Cart_products> {
   var Products_on_the_cart = [
     {
-      "name": "Armani Blazer",
-      "picture": "images/products/blazer1.png",
-      "price": 85,
+      "name": "'L' shaped couch ",
+      "picture": "images/products/aepplaryd.jpg.webp",
+      "price": 1649,
       "size": "M",
-      "color": "Gray",
+      "color": "Redwood",
       "quantity": 1
     },
     {
-      "name": "Black Oxfords",
-      "picture": "images/products/shoesM.png",
-      "price": 50,
-      "size": "7",
+      "name": "Dresser",
+      "picture": "images/products/dresser.jpg.webp",
+      "price":349,
+      "size": "M",
       "color": "Black",
       "quantity": 2
     }
@@ -114,19 +114,20 @@ class Single_cart_product extends StatelessWidget {
           fit: BoxFit.fill,
           child: Column(
             children: <Widget>[
-              IconButton(icon: const Icon(Icons.keyboard_arrow_up), iconSize: 80.0, onPressed: () => {}),
+              // IconButton(icon: const Icon(Icons.keyboard_arrow_up), iconSize: 80.0, onPressed: () => {}),
               
               Padding(
-                  padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(2, 13, 0, 0),
                   child:
-              Text (cart_prod_qty.toString(),
+              Text ('Qty: ' + cart_prod_qty.toString(),
                 style: const TextStyle(
-                  fontSize: 60.0,
+                  color: Colors.black54,
+                  fontSize: 17,
                   fontWeight: FontWeight.bold
                 ),
               ),),
 
-              IconButton(icon: const Icon(Icons.keyboard_arrow_down), iconSize: 80.0, onPressed: () => {})
+              // IconButton(icon: const Icon(Icons.keyboard_arrow_down), iconSize: 80.0, onPressed: () => {})
               
             ],
           )

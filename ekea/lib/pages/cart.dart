@@ -36,7 +36,7 @@ class _CartState extends State<Cart> {
                    padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
                      child: ListTile(
                        title: Text("Total: "),
-                       subtitle: Text("\$185"),
+                       subtitle: Text("\$2347"),
                      )
                  ),
               ),
