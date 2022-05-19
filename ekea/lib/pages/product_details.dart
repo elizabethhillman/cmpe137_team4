@@ -214,7 +214,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                    color: Colors.blue,
                    textColor: Colors.white,
                    elevation: 0.2,
-                   child: Text("Buy now!")
+                   child: Text("Buy Now!")
                  ),
                ),
 
