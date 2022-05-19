@@ -10,9 +10,9 @@ class ProductDetails extends StatefulWidget {
 
   ProductDetails(
       {this.product_detail_name,
-      this.product_detail_new_price,
-      this.product_detail_old_price,
-      this.product_detail_picture});
+        this.product_detail_new_price,
+        this.product_detail_old_price,
+        this.product_detail_picture});
 
   @override
   State<ProductDetails> createState() => _ProductDetailsState();
@@ -31,14 +31,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                     MaterialPageRoute(builder: (context) => HomePage()));
               },
               child: Text('EKEA')),
-          actions: [
-            IconButton(
-                icon: const Icon(
-                  Icons.search,
-                  color: Colors.white,
-                ),
-                onPressed: () {}),
-          ],
+          // actions: [
+          //   IconButton(
+          //       icon: const Icon(
+          //         Icons.search,
+          //         color: Colors.white,
+          //       ),
+          //       onPressed: () {}),
+          // ],
         ),
         body: ListView(children: <Widget>[
           Container(
@@ -58,17 +58,17 @@ class _ProductDetailsState extends State<ProductDetails> {
                     children: <Widget>[
                       Expanded(
                           child: Text(
-                        "\$${widget.product_detail_old_price}",
-                        style: const TextStyle(
-                            color: Colors.black87,
-                            decoration: TextDecoration.lineThrough),
-                      )),
+                            "\$${widget.product_detail_old_price}",
+                            style: const TextStyle(
+                                color: Colors.black87,
+                                decoration: TextDecoration.lineThrough),
+                          )),
                       Expanded(
                           child: Text(
-                        "\$${widget.product_detail_new_price}",
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.blue),
-                      )),
+                            "\$${widget.product_detail_new_price}",
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, color: Colors.blue),
+                          )),
                     ],
                   ),
                 ),
@@ -90,32 +90,32 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 title: new Text("Size"),
                                 content: SingleChildScrollView(
                                     child: Column(
-                                  children: <Widget>[
-                                    for (int i = 1; i <= 5; i++)
-                                      ListTile(
-                                        title: Text(
-                                          'Radio $i',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .subtitle1
-                                              ?.copyWith(
+                                      children: <Widget>[
+                                        for (int i = 1; i <= 5; i++)
+                                          ListTile(
+                                            title: Text(
+                                              'Radio $i',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1
+                                                  ?.copyWith(
                                                   color: i == 5
                                                       ? Colors.black38
                                                       : Colors.black),
-                                        ),
-                                        // leading: Radio(
-                                        //   value: i,
-                                        //   activeColor: const Color(0xFF6200EE),
-                                        //   onChanged: i == 5 ? null : (int value) {
-                                        //     setState(() {
-                                        //       _value = value;
-                                        //     });
-                                        //   },
-                                        //   groupValue: null,
-                                        // ),
-                                      ),
-                                  ],
-                                )),
+                                            ),
+                                            // leading: Radio(
+                                            //   value: i,
+                                            //   activeColor: const Color(0xFF6200EE),
+                                            //   onChanged: i == 5 ? null : (int value) {
+                                            //     setState(() {
+                                            //       _value = value;
+                                            //     });
+                                            //   },
+                                            //   groupValue: null,
+                                            // ),
+                                          ),
+                                      ],
+                                    )),
                                 actions: <Widget>[
                                   MaterialButton(
                                       onPressed: () {
@@ -207,24 +207,27 @@ class _ProductDetailsState extends State<ProductDetails> {
           Row(
             children: <Widget>[
               //------The Size Button -------
-              Expanded(
-                child: MaterialButton(
-                    onPressed: () {},
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    elevation: 0.2,
-                    child: Text("Buy now")),
-              ),
+              const Padding(padding: EdgeInsets.fromLTRB(12, 0, 0, 0)),
+               Expanded(
+                 child: MaterialButton(
+                   onPressed: () {},
+                   color: Colors.blue,
+                   textColor: Colors.white,
+                   elevation: 0.2,
+                   child: Text("Buy Now!")
+                 ),
+               ),
+
               IconButton(
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Cart()));
                   },
                   icon: Icon(Icons.add_shopping_cart)),
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.favorite_border),
-                  color: Colors.red)
+              // IconButton(
+              //     onPressed: () {},
+              //     icon: Icon(Icons.favorite_border),
+              //     color: Colors.red)
             ],
           ),
           const Divider(color: Colors.grey),
@@ -319,7 +322,7 @@ class _Similar_productsState extends State<Similar_products> {
     return GridView.builder(
         itemCount: product_list.length,
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Similar_single_prod(
             prod_name: product_list[index]['name'],
@@ -341,9 +344,9 @@ class Similar_single_prod extends StatelessWidget {
 
   Similar_single_prod(
       {this.prod_name,
-      this.prod_picture,
-      this.prod_old_price,
-      this.prod_price});
+        this.prod_picture,
+        this.prod_old_price,
+        this.prod_price});
 
   @override
   Widget build(BuildContext context) {
@@ -354,11 +357,11 @@ class Similar_single_prod extends StatelessWidget {
             child: InkWell(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => ProductDetails(
-                        product_detail_name: prod_name,
-                        product_detail_new_price: prod_price,
-                        product_detail_old_price: prod_old_price,
-                        product_detail_picture: prod_picture,
-                      ))),
+                    product_detail_name: prod_name,
+                    product_detail_new_price: prod_price,
+                    product_detail_old_price: prod_old_price,
+                    product_detail_picture: prod_picture,
+                  ))),
               child: GridTile(
                   footer: Container(
                       color: Colors.white,
@@ -379,21 +382,21 @@ class Similar_single_prod extends StatelessWidget {
                           ),
                         ],
                       )
-                      // child: ListTile(
-                      //   leading: Text(
-                      //     prod_name,
-                      //     style: TextStyle(fontWeight: FontWeight.bold),
-                      //   ),
-                      //   title: Text("\$$prod_price",
-                      //       style: const TextStyle(
-                      //           color: Colors.red, fontWeight: FontWeight.w800)),
-                      //   subtitle: Text("\$$prod_old_price",
-                      //       style: const TextStyle(
-                      //           color: Colors.black54,
-                      //           fontWeight: FontWeight.w800,
-                      //           decoration: TextDecoration.lineThrough)),
-                      // ),
-                      ),
+                    // child: ListTile(
+                    //   leading: Text(
+                    //     prod_name,
+                    //     style: TextStyle(fontWeight: FontWeight.bold),
+                    //   ),
+                    //   title: Text("\$$prod_price",
+                    //       style: const TextStyle(
+                    //           color: Colors.red, fontWeight: FontWeight.w800)),
+                    //   subtitle: Text("\$$prod_old_price",
+                    //       style: const TextStyle(
+                    //           color: Colors.black54,
+                    //           fontWeight: FontWeight.w800,
+                    //           decoration: TextDecoration.lineThrough)),
+                    // ),
+                  ),
                   child: Image.asset(prod_picture, fit: BoxFit.cover)),
             ),
           )),
