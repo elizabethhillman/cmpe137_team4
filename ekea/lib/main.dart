@@ -64,12 +64,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue,
         title: Text('EKEA'),
         actions: [
-          IconButton(
-              icon: const Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              onPressed: () {}),
+          // IconButton(
+          //     icon: const Icon(
+          //       Icons.search,
+          //       color: Colors.white,
+          //     ),
+          //     onPressed: () {}),
           IconButton(
               icon: const Icon(
                 Icons.shopping_cart,
@@ -126,11 +126,11 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.blue,
                     ))),
 
-            InkWell(
-                onTap: () {},
-                child: const ListTile(
-                    title: Text('Favorites'),
-                    leading: Icon(Icons.favorite, color: Colors.red))),
+            // InkWell(
+            //     onTap: () {},
+            //     child: const ListTile(
+            //         title: Text('Favorites'),
+            //         leading: Icon(Icons.favorite, color: Colors.red))),
 
             Divider(),
 
