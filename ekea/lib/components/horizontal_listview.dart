@@ -11,32 +11,32 @@ class HorizontalList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
-            image_location: 'images/clothesSketches/tshirt.png',
-            image_caption: 'Shirt',
+            image_location: 'carousel_images/Furniture.jpeg.webp',
+            image_caption: 'Furniture',
           ),
           Category(
-            image_location: 'images/clothesSketches/dress.png',
-            image_caption: 'Dresses',
+            image_location: 'carousel_images/home decor.jpeg.webp',
+            image_caption: 'Decor',
           ),
           Category(
-            image_location: 'images/clothesSketches/formal.png',
-            image_caption: 'Formal',
+            image_location: 'carousel_images/Kitchen & tableware.jpeg.webp',
+            image_caption: 'Tableware',
           ),
           Category(
-            image_location: 'images/clothesSketches/jacket.png',
-            image_caption: 'Jackets',
+            image_location: 'carousel_images/Beds & Mattresses.jpeg.webp',
+            image_caption: 'Beds',
           ),
           Category(
-            image_location: 'images/clothesSketches/shoe.png',
-            image_caption: 'Shoes',
+            image_location: 'carousel_images/rugs.jpeg.webp',
+            image_caption: 'Rugs',
           ),
           Category(
-            image_location: 'images/clothesSketches/pants.png',
-            image_caption: 'Pants',
+            image_location: 'carousel_images/Smart home.jpeg.webp',
+            image_caption: 'IoT',
           ),
           Category(
-            image_location: 'images/clothesSketches/necklace.png',
-            image_caption: 'Accessory',
+            image_location: 'carousel_images/bathroom.jpeg.webp',
+            image_caption: 'Bathroom',
           ),
         ],
       ),
@@ -59,14 +59,14 @@ class Category extends StatelessWidget {
         child: Container(
           width: 100.0,
           child: ListTile(
-            title: Image.asset(image_location,
-            width: 100.0,
-            height: 80.0),
-            subtitle: Container(
-              alignment: Alignment.topCenter,
-              child: Text(image_caption, style: new TextStyle(fontSize: 12.0),),
-            )
-          ),
+              title: Image.asset(image_location, width: 100.0, height: 80.0),
+              subtitle: Container(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  image_caption,
+                  style: new TextStyle(fontSize: 12.0),
+                ),
+              )),
         ),
       ),
     );

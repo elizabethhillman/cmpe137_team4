@@ -4,7 +4,6 @@ import 'package:ekea/components/horizontal_listview.dart';
 import 'package:ekea/components/products.dart';
 import 'package:ekea/pages/cart.dart';
 
-
 void main() {
   runApp(
     const MaterialApp(
@@ -33,27 +32,27 @@ class _HomePageState extends State<HomePage> {
           ),
           items: [
             Image.asset(
-              'carousel_images/carousel1.jpg',
+              'carousel_images/carousel1.jpeg.webp',
               fit: BoxFit.cover,
               width: 500.0,
             ),
             Image.asset(
-              'carousel_images/carousel2.jpg',
+              'carousel_images/carousel2.jpg.webp',
               fit: BoxFit.cover,
               width: 500.0,
             ),
             Image.asset(
-              'carousel_images/carousel3.jpeg',
+              'carousel_images/carousel3.jpg',
               fit: BoxFit.cover,
               width: 500.0,
             ),
             Image.asset(
-              'carousel_images/carousel4.webp',
+              'carousel_images/carousel4.jpg',
               fit: BoxFit.cover,
               width: 500.0,
             ),
             Image.asset(
-              'carousel_images/carousel5.jpg',
+              'carousel_images/carousel5.jpg.webp',
               fit: BoxFit.cover,
               width: 500.0,
             ),
@@ -77,7 +76,8 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
               ),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Cart()));
               })
         ],
       ),
@@ -90,21 +90,23 @@ class _HomePageState extends State<HomePage> {
               accountEmail: const Text(
                 'sammy.spartan@sjsu.edu',
               ),
-              currentAccountPicture: GestureDetector(
-                child: new Image.asset('images/sjsuLogo.jpg')
-                // new CircleAvatar(backgroundColor: Colors.grey),
-              ),
+              currentAccountPicture:
+                  GestureDetector(child: new Image.asset('images/sjsuLogo.jpg')
+                      // new CircleAvatar(backgroundColor: Colors.grey),
+                      ),
               decoration: new BoxDecoration(color: Colors.blue),
             ),
             InkWell(
                 onTap: () {},
                 child: const ListTile(
-                    title: Text('Home Page'), leading: Icon(Icons.home, color: Colors.blue))),
+                    title: Text('Home Page'),
+                    leading: Icon(Icons.home, color: Colors.blue))),
 
             InkWell(
                 onTap: () {},
                 child: const ListTile(
-                    title: Text('My Account'), leading: Icon(Icons.person, color: Colors.blue))),
+                    title: Text('My Account'),
+                    leading: Icon(Icons.person, color: Colors.blue))),
 
             InkWell(
                 onTap: () {},
@@ -114,15 +116,21 @@ class _HomePageState extends State<HomePage> {
 
             InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Cart()));
                 },
                 child: const ListTile(
-                    title: Text('Shopping Cart'), leading: Icon(Icons.shopping_cart, color: Colors.blue,))),
+                    title: Text('Shopping Cart'),
+                    leading: Icon(
+                      Icons.shopping_cart,
+                      color: Colors.blue,
+                    ))),
 
             InkWell(
                 onTap: () {},
                 child: const ListTile(
-                    title: Text('Favorites'), leading: Icon(Icons.favorite, color: Colors.red))),
+                    title: Text('Favorites'),
+                    leading: Icon(Icons.favorite, color: Colors.red))),
 
             Divider(),
 
@@ -152,12 +160,10 @@ class _HomePageState extends State<HomePage> {
             child: Text('Categories'),
           ),
           const HorizontalList(),
-
           const Padding(
             padding: EdgeInsets.all(20.0),
             child: Text('Recent products'),
           ),
-
           Container(
             height: 320.0,
             child: Products(),
