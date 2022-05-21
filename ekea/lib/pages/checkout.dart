@@ -1,4 +1,7 @@
+import 'package:ekea/main.dart';
 import 'package:flutter/material.dart';
+
+import 'cart.dart';
 
 class Checkout extends StatefulWidget {
   const Checkout({Key? key}) : super(key: key);
@@ -15,7 +18,24 @@ class _CheckoutState extends State<Checkout> {
         appBar: AppBar(
           elevation: 0.0,
           backgroundColor: Colors.blue,
-          title: Text('Checkout'), // <Widget>[]
+          title: Text('Checkout'),
+          actions: [
+            // IconButton(
+            //     icon: const Icon(
+            //       Icons.search,
+            //       color: Colors.white,
+            //     ),
+            //     onPressed: () {}),
+            IconButton(
+                icon: const Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => HomePage()));
+                })
+          ],// <Widget>[]
         ),
         body: Center(
           child: Container(
