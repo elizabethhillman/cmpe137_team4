@@ -140,7 +140,18 @@ class Single_prod extends StatelessWidget {
                       //           decoration: TextDecoration.lineThrough)),
                       // ),
                       ),
-                  child: Image.asset(prod_picture, fit: BoxFit.cover)),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: const Color(0x007c94b6),
+                          border: Border.all(color: Colors.black, width: 2),
+                          borderRadius: BorderRadius.circular(6)
+                        ),
+                        child: Padding(padding: EdgeInsets.all(15.0), child: Image.asset(prod_picture, fit: BoxFit.cover))
+                      )
+                    )
+                ),
             ),
           )),
     );

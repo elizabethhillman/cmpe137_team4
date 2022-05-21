@@ -88,6 +88,7 @@ flutter:
     - images/products/dinnerware.jpg.webp
     - images/products/dresser2.jpg.webp
     - images/products/microwave-oven.jpg.webp
+    - images/sjsuLogo.jpg
     - images/sjsuLogo.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
