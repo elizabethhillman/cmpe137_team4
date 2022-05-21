@@ -1,3 +1,4 @@
+import 'package:ekea/pages/account.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ekea/components/horizontal_listview.dart';
@@ -91,28 +92,34 @@ class _HomePageState extends State<HomePage> {
                 'sammy.spartan@sjsu.edu',
               ),
               currentAccountPicture:
-                  GestureDetector(child: new Image.asset('images/sjsuLogo.jpg')
+                  GestureDetector(child: Image.asset('images/sjsuLogo.jpg')
                       // new CircleAvatar(backgroundColor: Colors.grey),
                       ),
-              decoration: new BoxDecoration(color: Colors.blue),
+              decoration: const BoxDecoration(color: Colors.blue),
             ),
             InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => const HomePage()));
+                },
                 child: const ListTile(
                     title: Text('Home Page'),
                     leading: Icon(Icons.home, color: Colors.blue))),
 
             InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Account()));
+                },
                 child: const ListTile(
                     title: Text('My Account'),
                     leading: Icon(Icons.person, color: Colors.blue))),
 
-            InkWell(
-                onTap: () {},
-                child: const ListTile(
-                    title: Text('My Orders'),
-                    leading: Icon(Icons.shopping_basket, color: Colors.blue))),
+            // InkWell(
+            //     onTap: () {},
+            //     child: const ListTile(
+            //         title: Text('My Orders'),
+            //         leading: Icon(Icons.shopping_basket, color: Colors.blue))),
 
             InkWell(
                 onTap: () {
