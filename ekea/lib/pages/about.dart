@@ -24,7 +24,7 @@ class _AboutState extends State<About> {
                 children: const <Widget>[
                   Expanded(
                       child: Padding (
-                        padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
+                        padding: EdgeInsets.fromLTRB(20, 0, 20, 30),
                           child: Text(
                             "Ekea is an e-commerce app where users can shop "
                                 "from a wide range of products, searching by the"
