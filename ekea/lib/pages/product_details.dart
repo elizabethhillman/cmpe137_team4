@@ -17,8 +17,15 @@ class ProductDetails extends StatefulWidget {
   @override
   State<ProductDetails> createState() => _ProductDetailsState();
 }
+enum sizeList {size, small, medium, large}
+enum colorList {color, black, red, brown, blue, white}
+enum quantityList {quantity, one, two, three, four}
 
 class _ProductDetailsState extends State<ProductDetails> {
+  sizeList? chosenSize = sizeList.size;
+  colorList? chosenColor = colorList.color;
+  quantityList? chosenQuantity = quantityList.quantity;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,14 +38,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                     MaterialPageRoute(builder: (context) => HomePage()));
               },
               child: Text('EKEA')),
-          // actions: [
-          //   IconButton(
-          //       icon: const Icon(
-          //         Icons.search,
-          //         color: Colors.white,
-          //       ),
-          //       onPressed: () {}),
-          // ],
         ),
         body: ListView(children: <Widget>[
           Container(
@@ -91,41 +90,48 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 content: SingleChildScrollView(
                                     child: Column(
                                       children: <Widget>[
-                                        for (int i = 1; i <= 5; i++)
-                                          ListTile(
-                                            title: Text(
-                                              'Radio $i',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .subtitle1
-                                                  ?.copyWith(
-                                                  color: i == 5
-                                                      ? Colors.black38
-                                                      : Colors.black),
-                                            ),
-                                            // leading: Radio(
-                                            //   value: i,
-                                            //   activeColor: const Color(0xFF6200EE),
-                                            //   onChanged: i == 5 ? null : (int value) {
-                                            //     setState(() {
-                                            //       _value = value;
-                                            //     });
-                                            //   },
-                                            //   groupValue: null,
-                                            // ),
-                                          ),
-                                      ],
-                                    )),
-                                actions: <Widget>[
-                                  MaterialButton(
-                                      onPressed: () {
+                                    ListTile(
+                                    title: const Text('Small'),
+                                  leading: Radio<sizeList>(
+                                    value: sizeList.small,
+                                    groupValue: chosenSize,
+                                    onChanged: (sizeList? value) {
+                                      setState(() {
+                                        chosenSize = value;
                                         Navigator.of(context).pop(context);
-                                      },
-                                      child: const Text(
-                                        "Close",
-                                        style: TextStyle(color: Colors.blue),
-                                      ))
-                                ],
+                                      });
+                                    },
+                                  ),
+                                ),
+                                ListTile(
+                                  title: const Text('Medium'),
+                                  leading: Radio<sizeList>(
+                                    value: sizeList.medium,
+                                    groupValue: chosenSize,
+                                    onChanged: (sizeList? value) {
+                                      setState(() {
+                                        chosenSize = value;
+                                        Navigator.of(context).pop(context);
+                                      });
+                                    },
+                                  ),
+                                ),
+                                        ListTile(
+                                          title: const Text('Large'),
+                                          leading: Radio<sizeList>(
+                                            value: sizeList.large,
+                                            groupValue: chosenSize,
+                                            onChanged: (sizeList? value) {
+                                              setState(() {
+                                                chosenSize = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                          ],
+
+                                    )),
                               );
                             });
                       },
@@ -134,7 +140,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                       elevation: 0.2,
                       child: Row(
                         children: <Widget>[
-                          Expanded(child: new Text("Size")),
+                          Expanded(child: Text(chosenSize.toString().substring(9),
+                          style: TextStyle(
+                            fontSize: 11.9,
+                          ),)
+                          ),
                           Expanded(child: new Icon(Icons.arrow_drop_down)),
                         ],
                       ))),
@@ -146,17 +156,77 @@ class _ProductDetailsState extends State<ProductDetails> {
                             builder: (context) {
                               return AlertDialog(
                                 title: new Text("Color"),
-                                content: Text("Choose the color"),
-                                actions: <Widget>[
-                                  MaterialButton(
-                                      onPressed: () {
-                                        Navigator.of(context).pop(context);
-                                      },
-                                      child: const Text(
-                                        "Close",
-                                        style: TextStyle(color: Colors.blue),
-                                      ))
-                                ],
+                                content: SingleChildScrollView(
+                                    child: Column(
+                                      children: <Widget>[
+                                        ListTile(
+                                          title: const Text('Black'),
+                                          leading: Radio<colorList>(
+                                            value: colorList.black,
+                                            groupValue: chosenColor,
+                                            onChanged: (colorList? value) {
+                                              setState(() {
+                                                chosenColor = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: const Text('Brown'),
+                                          leading: Radio<colorList>(
+                                            value: colorList.brown,
+                                            groupValue: chosenColor,
+                                            onChanged: (colorList? value) {
+                                              setState(() {
+                                                chosenColor = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: const Text('White'),
+                                          leading: Radio<colorList>(
+                                            value: colorList.white,
+                                            groupValue: chosenColor,
+                                            onChanged: (colorList? value) {
+                                              setState(() {
+                                                chosenColor = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: const Text('Red'),
+                                          leading: Radio<colorList>(
+                                            value: colorList.red,
+                                            groupValue: chosenColor,
+                                            onChanged: (colorList? value) {
+                                              setState(() {
+                                                chosenColor = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: const Text('Blue'),
+                                          leading: Radio<colorList>(
+                                            value: colorList.blue,
+                                            groupValue: chosenColor,
+                                            onChanged: (colorList? value) {
+                                              setState(() {
+                                                chosenColor = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                      ],
+
+                                    )),
                               );
                             });
                       },
@@ -165,8 +235,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                       elevation: 0.2,
                       child: Row(
                         children: <Widget>[
-                          Expanded(child: new Text("Color")),
-                          Expanded(child: new Icon(Icons.arrow_drop_down))
+                          Expanded(child: Text(chosenColor.toString().substring(10))),
+                          Expanded(child: new Icon(Icons.arrow_drop_down)),
                         ],
                       ))),
               Expanded(
@@ -177,17 +247,64 @@ class _ProductDetailsState extends State<ProductDetails> {
                             builder: (context) {
                               return AlertDialog(
                                 title: new Text("Quantity"),
-                                content: Text("Choose the quantity"),
-                                actions: <Widget>[
-                                  MaterialButton(
-                                      onPressed: () {
-                                        Navigator.of(context).pop(context);
-                                      },
-                                      child: const Text(
-                                        "Close",
-                                        style: TextStyle(color: Colors.blue),
-                                      ))
-                                ],
+                                content: SingleChildScrollView(
+                                    child: Column(
+                                      children: <Widget>[
+                                        ListTile(
+                                          title: const Text('One'),
+                                          leading: Radio<quantityList>(
+                                            value: quantityList.one,
+                                            groupValue: chosenQuantity,
+                                            onChanged: (quantityList? value) {
+                                              setState(() {
+                                                chosenQuantity = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: const Text('Two'),
+                                          leading: Radio<quantityList>(
+                                            value: quantityList.two,
+                                            groupValue: chosenQuantity,
+                                            onChanged: (quantityList? value) {
+                                              setState(() {
+                                                chosenQuantity = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: const Text('Three'),
+                                          leading: Radio<quantityList>(
+                                            value: quantityList.three,
+                                            groupValue: chosenQuantity,
+                                            onChanged: (quantityList? value) {
+                                              setState(() {
+                                                chosenQuantity = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: const Text('Four'),
+                                          leading: Radio<quantityList>(
+                                            value: quantityList.four,
+                                            groupValue: chosenQuantity,
+                                            onChanged: (quantityList? value) {
+                                              setState(() {
+                                                chosenQuantity = value;
+                                                Navigator.of(context).pop(context);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                      ],
+
+                                    )),
                               );
                             });
                       },
@@ -196,10 +313,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                       elevation: 0.2,
                       child: Row(
                         children: <Widget>[
-                          Expanded(child: new Text("Qty")),
-                          Expanded(child: new Icon(Icons.arrow_drop_down))
+                          Expanded(child: Text(chosenQuantity.toString().substring(13))),
+                          Expanded(child: new Icon(Icons.arrow_drop_down)),
                         ],
-                      )))
+                      ))),
             ],
           ),
 
@@ -208,15 +325,15 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               //------The Size Button -------
               const Padding(padding: EdgeInsets.fromLTRB(12, 0, 0, 0)),
-               Expanded(
-                 child: MaterialButton(
-                   onPressed: () {},
-                   color: Colors.blue,
-                   textColor: Colors.white,
-                   elevation: 0.2,
-                   child: Text("Buy Now!")
-                 ),
-               ),
+              Expanded(
+                child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.blue,
+                    textColor: Colors.white,
+                    elevation: 0.2,
+                    child: Text("Buy Now!")
+                ),
+              ),
 
               IconButton(
                   onPressed: () {
