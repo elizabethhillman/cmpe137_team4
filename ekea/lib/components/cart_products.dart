@@ -14,7 +14,7 @@ class _Cart_productsState extends State<Cart_products> {
       "picture": "images/products/aepplaryd.jpg.webp",
       "price": 1649,
       "size": "M",
-      "color": "Redwood",
+      "color": "Red",
       "quantity": 1
     },
     {
