@@ -57,7 +57,7 @@ class _AccountState extends State<Account> {
                   child: Padding (
                     padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
                     child: Image.asset(
-                     "images/sjsuLogo.jpg",
+                     "images/sjsuLogo.png",
 
                     ),
                   )
@@ -66,7 +66,7 @@ class _AccountState extends State<Account> {
 
               const Expanded(
                 child: Padding(
-                    padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 40),
                     child: ListTile(
                       title: Text("Sammy Spartan"),
                       subtitle: Text(
