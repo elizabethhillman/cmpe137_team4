@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ekea/main.dart';
-import 'package:ekea/pages/cart.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
@@ -35,12 +34,12 @@ class _ProductDetailsState extends State<ProductDetails> {
           title: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
+                    MaterialPageRoute(builder: (context) => const HomePage()));
               },
-              child: Text('EKEA')),
+              child: const Text('EKEA')),
         ),
         body: ListView(children: <Widget>[
-          Container(
+          SizedBox(
             height: 300.0,
             child: GridTile(
               child: Container(
@@ -51,7 +50,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 color: Colors.white70,
                 child: ListTile(
                   leading: Text(widget.product_detail_name,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 16.0)),
                   title: Row(
                     children: <Widget>[
@@ -86,7 +85,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: new Text("Size"),
+                                title: const Text("Size"),
                                 content: SingleChildScrollView(
                                     child: Column(
                                       children: <Widget>[
@@ -141,11 +140,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                       child: Row(
                         children: <Widget>[
                           Expanded(child: Text(chosenSize.toString().substring(9),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 11.9,
                           ),)
                           ),
-                          Expanded(child: new Icon(Icons.arrow_drop_down)),
+                          const Expanded(child: Icon(Icons.arrow_drop_down)),
                         ],
                       ))),
               Expanded(
@@ -155,7 +154,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: new Text("Color"),
+                                title: const Text("Color"),
                                 content: SingleChildScrollView(
                                     child: Column(
                                       children: <Widget>[
@@ -236,7 +235,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       child: Row(
                         children: <Widget>[
                           Expanded(child: Text(chosenColor.toString().substring(10))),
-                          Expanded(child: new Icon(Icons.arrow_drop_down)),
+                          Expanded(child: Icon(Icons.arrow_drop_down)),
                         ],
                       ))),
               Expanded(
@@ -246,7 +245,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: new Text("Quantity"),
+                                title: const Text("Quantity"),
                                 content: SingleChildScrollView(
                                     child: Column(
                                       children: <Widget>[
@@ -314,7 +313,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       child: Row(
                         children: <Widget>[
                           Expanded(child: Text(chosenQuantity.toString().substring(13))),
-                          Expanded(child: new Icon(Icons.arrow_drop_down)),
+                          Expanded(child: Icon(Icons.arrow_drop_down)),
                         ],
                       ))),
             ],
@@ -331,7 +330,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     color: Colors.blue,
                     textColor: Colors.white,
                     elevation: 0.2,
-                    child: Text("Buy Now!")
+                    child: const Text("Buy Now!")
                 ),
               ),
 
@@ -339,7 +338,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   onPressed: () {
                     // Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
                   },
-                  icon: Icon(Icons.add_shopping_cart)),
+                  icon: const Icon(Icons.add_shopping_cart)),
               // IconButton(
               //     onPressed: () {},
               //     icon: Icon(Icons.favorite_border),
@@ -359,7 +358,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ),
             Padding(
-                padding: EdgeInsets.all(5.0),
+                padding: const EdgeInsets.all(5.0),
                 child: Text("${widget.product_detail_name}"))
           ]),
           Row(children: const <Widget>[
@@ -451,8 +450,6 @@ class _Similar_productsState extends State<Similar_products> {
 }
 
 class Similar_single_prod extends StatelessWidget {
-  //const Single_prod({Key? key}) : super(key: key);
-
   final prod_name;
   final prod_picture;
   final prod_old_price;
@@ -468,7 +465,7 @@ class Similar_single_prod extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Hero(
-          tag: Text("hero 1"),
+          tag: const Text("hero 1"),
           child: Material(
             child: InkWell(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -498,20 +495,6 @@ class Similar_single_prod extends StatelessWidget {
                           ),
                         ],
                       )
-                    // child: ListTile(
-                    //   leading: Text(
-                    //     prod_name,
-                    //     style: TextStyle(fontWeight: FontWeight.bold),
-                    //   ),
-                    //   title: Text("\$$prod_price",
-                    //       style: const TextStyle(
-                    //           color: Colors.red, fontWeight: FontWeight.w800)),
-                    //   subtitle: Text("\$$prod_old_price",
-                    //       style: const TextStyle(
-                    //           color: Colors.black54,
-                    //           fontWeight: FontWeight.w800,
-                    //           decoration: TextDecoration.lineThrough)),
-                    // ),
                   ),
                   child: Image.asset(prod_picture, fit: BoxFit.cover)),
             ),

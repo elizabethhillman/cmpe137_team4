@@ -65,7 +65,7 @@ class _ProductsState extends State<Products> {
     return GridView.builder(
         itemCount: product_list.length,
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Single_prod(
             prod_name: product_list[index]['name'],
@@ -95,7 +95,7 @@ class Single_prod extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Hero(
-          tag: Text("hero 1"),
+          tag: const Text("hero 1"),
           child: Material(
             child: InkWell(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -125,30 +125,16 @@ class Single_prod extends StatelessWidget {
                           ),
                         ],
                       )
-                      // child: ListTile(
-                      //   leading: Text(
-                      //     prod_name,
-                      //     style: TextStyle(fontWeight: FontWeight.bold),
-                      //   ),
-                      //   title: Text("\$$prod_price",
-                      //       style: const TextStyle(
-                      //           color: Colors.red, fontWeight: FontWeight.w800)),
-                      //   subtitle: Text("\$$prod_old_price",
-                      //       style: const TextStyle(
-                      //           color: Colors.black54,
-                      //           fontWeight: FontWeight.w800,
-                      //           decoration: TextDecoration.lineThrough)),
-                      // ),
-                      ),
+                    ),
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
                       child: Container(
                         decoration: BoxDecoration(
                           color: const Color(0x007c94b6),
                           border: Border.all(color: Colors.black, width: 2),
                           borderRadius: BorderRadius.circular(6)
                         ),
-                        child: Padding(padding: EdgeInsets.all(15.0), child: Image.asset(prod_picture, fit: BoxFit.cover))
+                        child: Padding(padding: const EdgeInsets.all(15.0), child: Image.asset(prod_picture, fit: BoxFit.cover))
                       )
                     )
                 ),
