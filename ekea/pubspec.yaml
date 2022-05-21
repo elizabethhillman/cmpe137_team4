@@ -90,6 +90,7 @@ flutter:
     - images/products/microwave-oven.jpg.webp
     - images/sjsuLogo.jpg
     - images/sjsuLogo.png
+    - images/confirmed.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
