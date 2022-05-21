@@ -16,15 +16,15 @@ class _CartState extends State<Cart> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.blue,
-        title: Text('Cart'),
-        actions: [
-          IconButton(
-              icon: const Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              onPressed: () {}),
-        ], // <Widget>[]
+        title: const Text('Cart'),
+        // actions: [
+          // IconButton(
+          //     icon: const Icon(
+          //       Icons.search,
+          //       color: Colors.white,
+          //     ),
+          //     onPressed: () {}),
+        // ], // <Widget>[]
       ),
       body: new Cart_products(),
       bottomNavigationBar: Container(
