@@ -19,12 +19,12 @@ class ProductDetails extends StatefulWidget {
 }
 enum sizeList {size, small, medium, large}
 enum colorList {color, black, red, brown, blue, white}
-enum quantityList {quantity, one, two, three, four}
+enum quantityList {qty, one, two, three, four}
 
 class _ProductDetailsState extends State<ProductDetails> {
   sizeList? chosenSize = sizeList.size;
   colorList? chosenColor = colorList.color;
-  quantityList? chosenQuantity = quantityList.quantity;
+  quantityList? chosenQuantity = quantityList.qty;
 
   @override
   Widget build(BuildContext context) {
@@ -337,8 +337,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
               IconButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Cart()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
                   },
                   icon: Icon(Icons.add_shopping_cart)),
               // IconButton(

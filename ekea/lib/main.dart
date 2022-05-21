@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ekea/components/horizontal_listview.dart';
 import 'package:ekea/components/products.dart';
 import 'package:ekea/pages/cart.dart';
+import 'package:ekea/pages/about.dart';
 
 void main() {
   runApp(
@@ -150,7 +151,10 @@ class _HomePageState extends State<HomePage> {
                     ))),
 
             InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => About()));
+                },
                 child: const ListTile(
                     title: Text('About'),
                     leading: Icon(

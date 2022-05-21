@@ -30,6 +30,7 @@
 //   }
 
 import 'package:flutter/material.dart';
+import 'package:ekea/pages/cart.dart';
 
 class Account extends StatefulWidget {
   const Account({Key? key}) : super(key: key);
@@ -57,7 +58,9 @@ class _AccountState extends State<Account> {
                   child: Padding (
                     padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+                      },
                       child: const Text(
                         "Checkout",
                         style: TextStyle(color: Colors.white),
