@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:ekea/components/cart_products.dart';
-
 import 'checkout.dart';
 
 class Cart extends StatefulWidget {
@@ -19,16 +17,8 @@ class _CartState extends State<Cart> {
         elevation: 0.0,
         backgroundColor: Colors.blue,
         title: const Text('Cart'),
-        // actions: [
-          // IconButton(
-          //     icon: const Icon(
-          //       Icons.search,
-          //       color: Colors.white,
-          //     ),
-          //     onPressed: () {}),
-        // ], // <Widget>[]
       ),
-      body: new Cart_products(),
+      body: const Cart_products(),
       bottomNavigationBar: Container(
           color: Colors.white,
           child: Row(
@@ -44,11 +34,11 @@ class _CartState extends State<Cart> {
               ),
               Expanded(
                 child: Padding (
-                  padding: EdgeInsets.fromLTRB(0, 0, 50, 30),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 50, 30),
                   child: MaterialButton(
                     onPressed: () {
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => Checkout()));
+                          context, MaterialPageRoute(builder: (context) => const Checkout()));
                     },
                     child: const Text(
                       "Checkout",

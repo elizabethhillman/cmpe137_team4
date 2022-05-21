@@ -77,20 +77,20 @@ class Single_cart_product extends StatelessWidget {
 
             Row(
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(0.0),
+                const Padding(
+                  padding: EdgeInsets.all(0.0),
                   child: Text("Size:"),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: Text(cart_prod_size, style: TextStyle(color: Colors.black),),
+                  child: Text(cart_prod_size, style: const TextStyle(color: Colors.black),),
                 ),
               
-                new Padding(padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
+                const Padding(padding: EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
                   child: Text("Color:"),),
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: Text(cart_prod_color, style: TextStyle(color: Colors.black)),
+                  child: Text(cart_prod_color, style: const TextStyle(color: Colors.black)),
                 )
 
               ],
@@ -99,8 +99,8 @@ class Single_cart_product extends StatelessWidget {
 //          ======== PRODUCT PRICE SECTION ========
             Container(
               alignment: Alignment.topLeft,
-              child: Text ("\$${cart_prod_price}",
-                style: TextStyle(
+              child: Text ("\$$cart_prod_price",
+                style: const TextStyle(
                   fontSize: 17.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.blue
@@ -114,21 +114,17 @@ class Single_cart_product extends StatelessWidget {
           fit: BoxFit.fill,
           child: Column(
             children: <Widget>[
-              // IconButton(icon: const Icon(Icons.keyboard_arrow_up), iconSize: 80.0, onPressed: () => {}),
-              
               Padding(
                   padding: const EdgeInsets.fromLTRB(2, 13, 0, 0),
                   child:
-              Text ('Qty: ' + cart_prod_qty.toString(),
-                style: const TextStyle(
-                  color: Colors.black54,
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold
+                Text ('Qty: ' + cart_prod_qty.toString(),
+                  style: const TextStyle(
+                    color: Colors.black54,
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
-              ),),
-
-              // IconButton(icon: const Icon(Icons.keyboard_arrow_down), iconSize: 80.0, onPressed: () => {})
-              
+              ),
             ],
           )
         ),
