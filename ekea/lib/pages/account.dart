@@ -8,6 +8,7 @@ class Account extends StatefulWidget {
 }
 
 class _AccountState extends State<Account> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,15 +22,13 @@ class _AccountState extends State<Account> {
           // color: Colors.white,
 
           child: Row(
-            children: <Widget>[
+            children:  <Widget>[
               Expanded(
                   child: Padding (
                     padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
 
                     child: Image.asset(
                      "images/sjsuLogo.png",
-
-
                     ),
                   )
 
@@ -39,16 +38,20 @@ class _AccountState extends State<Account> {
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(0, 0, 0, 40),
                     child: ListTile(
-                      title: Text("Sammy Spartan"),
+                      title: Text("Name: \nSammy Spartan \n"),
                       subtitle: Text(
-                          "sammy.spartan@sjsu.edu",
+                          "Email: \nsammy.spartan@sjsu.edu \n\nCredit Card: \nXXX-XXX-XXX-XX-0126",
                         style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14),
                       ),
-                    )
+                      isThreeLine: true,
+                    ),
                 ),
-              )
+                ),
+
             ],
-          )),)
+          )
+
+      ),)
     );
   }
 }

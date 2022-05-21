@@ -20,8 +20,8 @@ class _Cart_productsState extends State<Cart_products> {
     {
       "name": "Dresser",
       "picture": "images/products/dresser.jpg.webp",
-      "price":349,
-      "size": "M",
+      "price":698,
+      "size": "S",
       "color": "Black",
       "quantity": 2
     }
