@@ -1,36 +1,4 @@
-// import 'package:flutter/material.dart';
-//
-// void main() {
-//   runApp(
-//     const MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: Account(
-//
-//       ),
-//     ),
-//   );
-// }
-//
-//
-// class Account extends StatefulWidget {
-//   const Account({Key? key}) : super(key: key);
-//
-//   @override
-//   State<Account> createState() => _Account();
-// }
-//
-// class _Account extends State<Account> {
-//   @override
-//   Widget build(BuildContext context) {
-//
-//     return const Center(
-//       child: Text('Sammy Spartan \n sammy.spartan@sjsu.edu'),
-//     );
-//     }
-//   }
-
 import 'package:flutter/material.dart';
-import 'package:ekea/pages/cart.dart';
 
 class Account extends StatefulWidget {
   const Account({Key? key}) : super(key: key);
