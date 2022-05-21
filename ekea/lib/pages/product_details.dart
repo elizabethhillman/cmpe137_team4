@@ -337,7 +337,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
               IconButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
                   },
                   icon: Icon(Icons.add_shopping_cart)),
               // IconButton(
@@ -370,7 +370,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 style: TextStyle(color: Colors.grey),
               ),
             ),
-            Padding(padding: EdgeInsets.all(5.0), child: Text("Ekea"))
+            Padding(padding: EdgeInsets.all(5.0), child: Text("EKEA"))
           ]),
           Row(children: const <Widget>[
             Padding(
