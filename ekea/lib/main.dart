@@ -142,13 +142,13 @@ class _HomePageState extends State<HomePage> {
 
             Divider(),
 
-            InkWell(
-                onTap: () {},
-                child: const ListTile(
-                    title: Text('Settings'),
-                    leading: Icon(
-                      Icons.settings,
-                    ))),
+            // InkWell(
+            //     onTap: () {},
+            //     child: const ListTile(
+            //         title: Text('Settings'),
+            //         leading: Icon(
+            //           Icons.settings,
+            //         ))),
 
             InkWell(
                 onTap: () {
