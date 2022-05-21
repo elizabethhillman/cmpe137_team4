@@ -56,13 +56,9 @@ class _AccountState extends State<Account> {
               Expanded(
                   child: Padding (
                     padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
-                    child: MaterialButton(
-                      onPressed: () {},
-                      child: const Text(
-                        "Checkout",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      color: Colors.blue,
+                    child: Image.asset(
+                     "images/sjsuLogo.jpg",
+
                     ),
                   )
 
@@ -70,10 +66,13 @@ class _AccountState extends State<Account> {
 
               const Expanded(
                 child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 0, 0, 30),
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
                     child: ListTile(
                       title: Text("Sammy Spartan"),
-                      subtitle: Text("sammy.spartan@sjsu.edu"),
+                      subtitle: Text(
+                          "sammy.spartan@sjsu.edu",
+                        style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14),
+                      ),
                     )
                 ),
               )
