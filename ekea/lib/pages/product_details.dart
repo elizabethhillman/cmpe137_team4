@@ -337,7 +337,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
               IconButton(
                   onPressed: () {
-                    // Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
                   },
                   icon: Icon(Icons.add_shopping_cart)),
               // IconButton(
