@@ -25,7 +25,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Widget image_carousel = Container(
+    Widget imageCarousel = SizedBox(
       height: 200.0,
       child: CarouselSlider(
           options: CarouselOptions(
@@ -64,14 +64,8 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.blue,
-        title: Text('EKEA'),
+        title: const Text('EKEA'),
         actions: [
-          // IconButton(
-          //     icon: const Icon(
-          //       Icons.search,
-          //       color: Colors.white,
-          //     ),
-          //     onPressed: () {}),
           IconButton(
               icon: const Icon(
                 Icons.shopping_cart,
@@ -79,7 +73,7 @@ class _HomePageState extends State<HomePage> {
               ),
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Cart()));
+                    context, MaterialPageRoute(builder: (context) => const Cart()));
               })
         ],
       ),
@@ -94,7 +88,6 @@ class _HomePageState extends State<HomePage> {
               ),
               currentAccountPicture:
                   GestureDetector(child: Image.asset('images/sjsuLogo.jpg')
-                      // new CircleAvatar(backgroundColor: Colors.grey),
                       ),
               decoration: const BoxDecoration(color: Colors.blue),
             ),
@@ -110,22 +103,16 @@ class _HomePageState extends State<HomePage> {
             InkWell(
                 onTap: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Account()));
+                      context, MaterialPageRoute(builder: (context) => const Account()));
                 },
                 child: const ListTile(
                     title: Text('My Account'),
                     leading: Icon(Icons.person, color: Colors.blue))),
 
-            // InkWell(
-            //     onTap: () {},
-            //     child: const ListTile(
-            //         title: Text('My Orders'),
-            //         leading: Icon(Icons.shopping_basket, color: Colors.blue))),
-
             InkWell(
                 onTap: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Cart()));
+                      context, MaterialPageRoute(builder: (context) => const Cart()));
                 },
                 child: const ListTile(
                     title: Text('Shopping Cart'),
@@ -134,26 +121,12 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.blue,
                     ))),
 
-            // InkWell(
-            //     onTap: () {},
-            //     child: const ListTile(
-            //         title: Text('Favorites'),
-            //         leading: Icon(Icons.favorite, color: Colors.red))),
-
-            Divider(),
-
-            // InkWell(
-            //     onTap: () {},
-            //     child: const ListTile(
-            //         title: Text('Settings'),
-            //         leading: Icon(
-            //           Icons.settings,
-            //         ))),
+            const Divider(),
 
             InkWell(
                 onTap: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => About()));
+                      context, MaterialPageRoute(builder: (context) => const About()));
                 },
                 child: const ListTile(
                     title: Text('About'),
@@ -165,7 +138,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          image_carousel,
+          imageCarousel,
           const Padding(
             padding: EdgeInsets.all(8.0),
             child: Text('Categories'),
@@ -175,7 +148,7 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.all(20.0),
             child: Text('Recent products'),
           ),
-          Container(
+          const SizedBox(
             height: 320.0,
             child: Products(),
           )
