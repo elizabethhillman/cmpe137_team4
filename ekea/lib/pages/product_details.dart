@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ekea/main.dart';
+import 'package:ekea/pages/cart.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
